@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+  	<head>
+      	<title> ControlPIG </title>
+      	<meta charset="utf-8">
+      	<link rel="icon" href="favicon.ico"/>      	
+		<link rel="stylesheet" href="style.css"/>
+		<script language="javascript" src="javascript.js"></script>
+  	</head>
+  	<body>
+	  	<div id="interface">    
+			<header id="cabecalho">
+				<h1> ControlPIG </h1> 
+				<figure><img src="logo.png" class="logo"/></figure>
+				<h2> Controle de Fertilidade da Suinocultura </h2>							
+				<nav id="navegacao">
+					<ul>
+						<li><a href="index.html"><figure><img src="home.png" class="home"></figure></a></li>
+					</ul>
+				</nav>
+			</header>    	
+	    	<section id="corpo">
+	    		<article>					
+					<fieldset><legend><h3> Insira as informações referente ao rebanho suíno </h3></legend>		
+						<form name="formulario" class="form">				
+						 	<h4>				 							 		
+							 	Selecione a raça da fêmea:
+							 	<br>
+							 	<select name="raca" class="select_raca">
+									<option value=""></option>
+									<optgroup label="Raças estrangeiras">										
+										<option value="large_white"> Large White </option>
+										<option value="landrace"> Landrace  </option>
+										<option value="duroc"> Duroc </option>	
+										<option value="pietrain"> Pietrain </option>										
+										<option value="hampshire"> Hampshire </option>								
+										<option value="wessex"> Wessex </option>												
+									</optgroup>
+									<optgroup label="Raças nacionais">										
+										<option value="mouro"> Mouro </option>
+										<option value="piaui"> Piaui  </option>										
+										<option value="nilo"> Nilo </option>
+										<option value="canastra"> Canastra </option>
+									</optgroup>		
+								</select>							
+								<br>
+								<br>
+								Qual é a idade da fêmea?
+								<br>
+								<input type="number" value="idade" class="number" id="idade" min="4" max="8"> meses
+								<br>
+								<br>
+								A fêmea é da mesma raça que o macho?
+								<br>
+								<input type="radio" name="sexo" value="sim" class="radio"> Sim
+								<br>					
+								<input type="radio" name="sexo" value="nao" class="radio"> Não					
+								<br>
+								<br>
+								Alimentação da fêmea é realizada com:
+								<br>
+								<input type="checkbox" name="alimentacao" class="checkbox"> Trigo
+								<br>
+								<input type="checkbox" name="alimentacao" class="checkbox"> Soja
+								<br>
+								<input type="checkbox" name="alimentacao" class="checkbox"> Milho
+								<br>
+								<input type="checkbox" name="alimentacao" class="checkbox"> Outros
+								<br>
+								<br>
+								A limpeza do local e a troca de água é realizada:
+								<br>
+								<select name="criacao" class="select_criacao">
+									<option value=""></option>
+									<option value="otima"> Todos os dias </option>
+									<option value="boa"> A cada três dias </option>
+									<option value="ruim"> Uma vez por semana </option>				
+								</select>
+								<br>
+								<br>
+								O macho e a fêmea estiveram em contato no período de cio da fêmea?
+								<br>
+								<input type="radio" name="cio" value="sim" class="radio"> Sim
+								<br>					
+								<input type="radio" name="cio" value="nao" class="radio"> Não					
+								<br>
+								<br>
+								<input type="button" value="conferir resultado" class="botao" onclick="compilar()">		
+							</h4>			
+						</fieldset>
+					</form>				
+	    		</article>	    		
+	    	</section>	    	  	
+	    	<aside id="lateral">	    		
+	    		<h4> Acompanhe nossas dicas para sua produção: </h4>	    			    		
+		    	<figure class="foto_legenda1">
+		    		<a href="dica_1.html"> 
+		    			<figcaption><h4> Importância do manejo de qualidade </h4></figcaption>
+		    			<img src="dica_1.jpg" class="dicas"/>	    			   			
+		    		</a>
+		    	</figure>	    		
+		    	<figure class="foto_legenda2"> 
+		    		<a href="dica_2.html">
+		    			<figcaption><h4> Cuidados com os leitões ao nascer </h4></figcaption>
+		    			<img src="dica_2.jpg" class="dicas"/>	    			
+		    		</a>
+		    	</figure>
+		    	<h5> Principais referências em: </h5>		
+		    	<figure>
+		    		<a href="http://www.cnpsa.embrapa.br/SP/suinos/index.html" target="_blank">
+		    			<img src="embrapa_logo.png">
+		    		</a>
+		    	</figure>
+		    	<br>
+		    	<figure>
+		    		<a href="http://www.sossuinos.com.br/Tecnicos/info10.htm" target="_blank">
+		    			<img src="sos_logo.png">
+		    		</a>
+		    	</figure>		    	
+	    	</aside>   	
+	    	<footer id="rodape">    		
+				Desenvolvido por alunos da Universidade Positivo | Faculdade Arthur Thomas - Londrina/PR			
+	    		<br>
+	    		<br>
+	    		Disciplina Projeto Integrador | 2º Semestre de Análise e Desenvolvimento de Sistemas
+	    		<br>	    		
+	    		<figure><img src="html5_javascript_css3.png" class="logo_tecnologias"></figure>
+	    		<small> &copy; 2017 - Todos os direitos reservados </small>
+	    	</footer>
+	    	<div id="popup" class="popup">	    			
+	    		<figure>
+	    			<img src="close.png" class="botao_close" onclick="fechar()">
+	    		</figure>	    		
+	    		<h2> O total será de </h2>	    		
+	    		<input type="text" disabled="disabled" class="resultado" id="resultado"/>
+	    		<h2> suínos </h2>
+	    	</div> 
+		</div>		 
+	</body>
+</html>
