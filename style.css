@@ -3,7 +3,7 @@
 /* tipo de fonte do site */
 @font-face{
 	font-family: 'FonteSite';
-	src: url(ControlPIG/ubuntu.ttf);
+	src: url(ubuntu.ttf);
 }
 
 /* comandos para corpo da página */
